@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="UTF-8">
+  <title>Sistema || Recomendación</title>
+  <link href="/RecomendationVideo/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+
+  <!-- alertify -->
+  <link rel="stylesheet" href="/RecomendationVideo/css/default.min.css">
+  <link rel="stylesheet" href="/RecomendationVideo/css/alertify.css">
+  <link rel="stylesheet" href="/RecomendationVideo/css/style.css">
+
+
+  <script src="/RecomendationVideo/js/jquery.min.js"></script>
+  <script src="/RecomendationVideo/js/alertify.js"></script>
+  <script src="/RecomendationVideo/js/accionbotones.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="col-md-offset-3 col-md-6">
+		<center><h1>Sistema de recomendación de peliculas</h1></center>
+    <p>El sistema se basa en la popularidad de peliculas segun calificaciones de los usuarios</p>
+		<form>
+					<div>
+						<div class="form-horizontal">
+  						<div class="form-group">
+    						<label class="control-label col-xs-3">Rango de usuarios:</label>
+    						<div class="col-xs-8">
+    						<div class="input-group">
+   							 <input type="number" class="form-control" name="strRange1" id="strRange1" placeholder="Ej: 1 ">
+   							  <input type="number" class="form-control" name="strRange2" id="strRange2" placeholder="Ej: 6 ">
+   							</div>
+   							</div>
+  						</div>
+  						<div class="form-group">
+    						<label class="control-label col-xs-3">Top:</label>
+    						<div class="col-xs-8">
+      					    <div class="input-group">
+   							 <input type="number" class="form-control" name="top" id="top" placeholder="Ej: 5" onkeyup="javascript:this.value = this.value.replace(/[.,,]/, ''); if (isNaN(this.value)) this.value = 0;">
+   							   <span class="input-group-addon">*</span> 
+   							</div>
+                        </div>
+						</div>
+					</div>
+					<center><input type="button" class="btn btn-success" id="prediccion" value="Hacer recomendación"></center>
+		</form>
+	</div>
+	
+	
+  <div class="form-group">
+    <div class="col-lg-6" id="resultado"></div>
+  </div>
+</div>
+
+</body>
+</html>
